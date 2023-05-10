@@ -1,0 +1,201 @@
+body {
+  background-color: #dddddd;
+}
+.dashboard {
+  margin: 3vh 3vw;
+  height: 94vh;
+  width: 94vw;
+  display: grid;
+  /* grid-gap: 2vh; */
+  row-gap: 3vh;
+  column-gap: 3vw;
+  /* background-color: #DDDDDD; */
+  grid-template-areas:
+    "sidebar navbar navbar navbar navbar"
+    "sidebar card1 card2 card3 card4"
+    "sidebar activity activity activity activity"
+    "sidebar activity activity activity activity"
+    "sidebar activity activity activity activity"
+    "sidebar activity activity activity activity"
+    "sidebar activity activity activity activity"
+    "sidebar products products schedule schedule"
+    "sidebar products products schedule schedule"
+    "sidebar products products schedule schedule";
+  /* grid-template-rows: ; */
+}
+
+#sidebar {
+  background-color: black;
+  color: white;
+  grid-area: sidebar;
+  border-radius: 30px;
+  padding: 30px 0 20px 30px;
+}
+#navbar {
+  background-color: #dddddd;
+  grid-area: navbar;
+}
+#card1 {
+  background-color: #ddefe0;
+  grid-area: card1;
+  border-radius: 20px;
+  padding: 20px 25px 0px 25px;
+}
+#card1 >img{
+  float: right;
+}
+#card2 {
+  background-color: #f4ecdd;
+  grid-area: card2;
+  border-radius: 20px;
+  padding: 20px 25px 0px 25px;
+}
+#card2 >img{
+  float:right;
+}
+#card3 {
+  background-color: #efdada;
+  grid-area: card3;
+  border-radius: 20px;
+  /* padding: 20px 25px; */
+  padding: 20px 25px 50px 25px;
+
+}
+#card3 >img{
+  float: right;
+}
+#card4 {
+  background-color: #dee0ef;
+  grid-area: card4;
+  border-radius: 20px;
+  /* padding: 20px 25px; */
+  padding: 20px 25px 5px 25px;
+
+}
+#card4 >img{
+  float:right;
+}
+#activity {
+  background-color: #ffffff;
+  grid-area: activity;
+  padding: 10px 0 0 40px;
+  border-radius: 20px;
+}
+#products {
+  background-color: #ffffff;
+  grid-area: products;
+  border-radius: 20px;
+  padding: 30px 40px;
+}
+#schedule {
+  background-color: #ffffff;
+  grid-area: schedule;
+  border-radius: 20px;
+  padding: 30px 40px;
+}
+.cardcontent{
+  margin-top:45px
+}
+.navcontent{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+  .navcontent >div{
+    display: flex ;
+    justify-content: space-around;
+    width: 40%;
+}
+.navcontent >div >input{
+  border-radius: 10px;
+  padding: 0 15px;
+}
+
+.sidecontent{
+  margin: 20px 0 0 20px;
+  padding:0 4vw;
+  display: flex;
+  flex-direction: column ;
+  justify-content: space-between;
+  height: 90%;
+}
+.sidecontent ul li{
+  list-style: none;
+  line-height: 30px;
+}
+.faded-small{
+  opacity: .6;
+}
+.verticalbar{
+  margin-right: 10px;
+  display: inline-block;
+  height: 60px;
+  width: 5px;
+  background-color: red;
+}
+.verticalbarone{
+  background-color: #9BDD7C;
+}
+.verticalbartwo{
+  background-color: #6972C3;
+}
+
+.schedulecontent{
+  margin-bottom: 20px;
+  display: flex;
+}
+.avatar{
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  border-radius:50% ;
+}
+.authentication{
+  display: flex;
+  justify-content: space-between;
+}
+.loginbtn{
+  background-color: rgb(111, 111, 192);
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
+.logoutbtn{
+  background-color: transparent ;
+  border:none ;
+  cursor:pointer;
+}
+
+
+@media (max-width: 990px) {
+  .dashboard {
+    grid-template-areas:
+      "sidebar navbar navbar"
+      "sidebar card1 card2"
+      "sidebar card3 card4"
+      "sidebar activity activity"
+      "sidebar activity activity"
+      "sidebar activity activity"
+      "sidebar products products"
+      "sidebar schedule schedule";
+  }
+}
+@media (max-width: 450px){
+  .dashboard {
+    grid-template-areas:
+      "navbar navbar"
+      "sidebar card1"
+      "sidebar card2"
+      "sidebar card3"
+      "sidebar card4"
+      "activity activity"
+      "activity activity"
+      "activity activity"
+      "products products"
+      "schedule schedule"
+      ;
+  }
+  .navcontent >div >input{
+    display: none;
+  }
+}
